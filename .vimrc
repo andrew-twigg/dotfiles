@@ -52,6 +52,22 @@ call plug#end()
 syntax on
 
 " -----------------------------------------------------------------------------
+" Basic Settings
+"   Research any of these by running :help <setting>
+" -----------------------------------------------------------------------------
+
+" :filetype on enables filetype detection (so FileType autocmds will work). 
+" :filetype plugin on enables the loading of filetype-specific scripts in 
+" ftplugin directories when the filetype is set. The same goes for 
+" :filetype indent on. All three can be combined into a single line.
+filetype plugin indent on
+
+set backspace=indent,eol,start  " allow backspace
+set tabstop=4                   " show existing tab with 4 spaces width
+set shiftwidth=4                " when indenting with '>', use 4 spaces width
+set expandtab                   " On pressing tab, insert 4 spaces
+
+" -----------------------------------------------------------------------------
 " Plugin settings, mappings and autocommands
 " -----------------------------------------------------------------------------
 
@@ -78,4 +94,4 @@ let g:mkdp_refresh_slow=1
 
 " custom markdown style
 let g:mkdp_markdown_css='~/.vim/autoload/sindresorhus/github-markdown-css/github-markdown.css'
-
+	
