@@ -98,12 +98,6 @@ nnoremap <C-h> <C-w><C-h>
 nnoremap <C-k> <C-w><C-k>
 nnoremap <C-j> <C-w><C-j>
 
-" Resizing windows with arrow keys
-" nnoremap <C-Up>     :resize +2<CR>
-" nnoremap <C-Down>   :resize -2<CR>
-" nnoremap <C-Left>   :vertical resize +2<CR>
-" nnoremap <C-Right>  :vertical resize -2<CR>
-
 " -----------------------------------------------------------------------------
 " Plugin settings, mappings and autocommands
 " -----------------------------------------------------------------------------
