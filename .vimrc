@@ -85,10 +85,10 @@ set tabstop=4                   " show existing tab with 4 spaces width
 " -----------------------------------------------------------------------------
 
 " Resizing windows with arrow keys
-nnoremap <Up>       :resize +2<CR>
-nnoremap <Down>     :resize -2<CR>
-nnoremap <Left>     :vertical resize +2<CR>
-nnoremap <Right>    :vertical resize -2<CR>
+nnoremap <C-Up>     :resize +2<CR>
+nnoremap <C-Down>   :resize -2<CR>
+nnoremap <C-Left>   :vertical resize +2<CR>
+nnoremap <C-Right>  :vertical resize -2<CR>
 
 " -----------------------------------------------------------------------------
 " Plugin settings, mappings and autocommands
