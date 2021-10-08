@@ -12,4 +12,8 @@ Node and yarn for markdown preview.
 brew install yarn node
 ```
 
-$X_1$
+### [Markdown lint](https://github.com/DavidAnson/markdownlint)
+
+```sh
+yarn add markdownlint --dev
+```
