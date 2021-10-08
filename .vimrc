@@ -84,11 +84,25 @@ set tabstop=4                   " show existing tab with 4 spaces width
 " Basic mappings
 " -----------------------------------------------------------------------------
 
+" Seamlessly treat visual lines as actual lines when moving around.
+noremap j gj
+noremap k gk
+noremap <Down> gj
+noremap <Up> gk
+inoremap <Down> <C-o>gj
+inoremap <Up> <C-o>gk
+
+" Navigate around splits with a single key combo.
+nnoremap <C-l> <C-w><C-l>
+nnoremap <C-h> <C-w><C-h>
+nnoremap <C-k> <C-w><C-k>
+nnoremap <C-j> <C-w><C-j>
+
 " Resizing windows with arrow keys
-nnoremap <C-Up>     :resize +2<CR>
-nnoremap <C-Down>   :resize -2<CR>
-nnoremap <C-Left>   :vertical resize +2<CR>
-nnoremap <C-Right>  :vertical resize -2<CR>
+" nnoremap <C-Up>     :resize +2<CR>
+" nnoremap <C-Down>   :resize -2<CR>
+" nnoremap <C-Left>   :vertical resize +2<CR>
+" nnoremap <C-Right>  :vertical resize -2<CR>
 
 " -----------------------------------------------------------------------------
 " Plugin settings, mappings and autocommands
