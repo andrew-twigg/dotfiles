@@ -38,6 +38,9 @@ call plug#begin('~/.vim/plugged')
 " Code-completion engine
 "Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
 
+" Ale (Asynchronous Lint Engine)
+Plug 'dense-analysis/ale'
+
 " Markdown
 Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
@@ -63,13 +66,25 @@ syntax on
 filetype plugin indent on
 
 set backspace=indent,eol,start  " allow backspace
-set tabstop=4                   " show existing tab with 4 spaces width
+set expandtab                   " on pressing tab, insert 4 spaces
+set nu                          " line numbers on
 set shiftwidth=4                " when indenting with '>', use 4 spaces width
-set expandtab                   " On pressing tab, insert 4 spaces
+set tabstop=4                   " show existing tab with 4 spaces width
 
 " -----------------------------------------------------------------------------
 " Plugin settings, mappings and autocommands
 " -----------------------------------------------------------------------------
+
+" .............................................................................
+" dense-analysis/ale
+" .............................................................................
+
+let g:ale_linters = {'python': ['flake8']} " 'pydocstyle', 'bandit', 'mypy'
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'python': ['black', 'isort']
+\} " 'yapf', 'autopep8'
+let g:ale_fix_on_save = 1
 
 " .............................................................................
 " plasticboy/vim-markdown

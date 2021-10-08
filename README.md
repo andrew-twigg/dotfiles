@@ -11,3 +11,5 @@ Node and yarn for markdown preview.
 ```sh
 brew install yarn node
 ```
+
+$X_1$
