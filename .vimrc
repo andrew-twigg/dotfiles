@@ -36,7 +36,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " Code-completion engine
-"Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
+Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
 
 " Ale (Asynchronous Lint Engine)
 Plug 'dense-analysis/ale'
@@ -60,6 +60,12 @@ call plug#end()
 
 " Enable syntax highlighting.
 syntax on
+
+" Spelling mistakes will be colored up red.
+hi SpellBad cterm=underline ctermfg=203 guifg=#ff5f5f
+hi SpellLocal cterm=underline ctermfg=203 guifg=#ff5f5f
+hi SpellRare cterm=underline ctermfg=203 guifg=#ff5f5f
+hi SpellCap cterm=underline ctermfg=203 guifg=#ff5f5f
 
 " -----------------------------------------------------------------------------
 " Basic settings
