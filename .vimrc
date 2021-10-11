@@ -29,7 +29,7 @@ if empty(glob('~/.vim/autoload/sindresorhus/github-markdown-css'))
 endif
 
 " -----------------------------------------------------------------------------
-" Plugings
+" Plugins
 " -----------------------------------------------------------------------------
 
 " Specify a directory for plugins.
