@@ -52,6 +52,9 @@ Plug 'vim-airline/vim-airline-themes'
 " Display Git changes
 Plug 'airblade/vim-gitgutter'
 
+" OmniSharp to provide IDE like abilities for C#
+Plug 'OmniSharp/omnisharp-vim'
+
 call plug#end()
 
 " -----------------------------------------------------------------------------
