@@ -36,7 +36,8 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " Code-completion engine
-Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
+" Note this is Apple Silicon specific.
+Plug 'ycm-core/YouCompleteMe', { 'do': '/opt/homebrew/bin/python3 ./install.py --cs-completer' }
 
 " Ale (Asynchronous Lint Engine)
 Plug 'dense-analysis/ale'
@@ -110,6 +111,14 @@ nnoremap <C-j> <C-w><C-j>
 " -----------------------------------------------------------------------------
 " Plugin settings, mappings and autocommands
 " -----------------------------------------------------------------------------
+
+" .............................................................................
+" ycm-core/YouCompleteMe
+" .............................................................................
+
+" On Apple silicon, Homebrew installs files into the /opt/homebrew/ folder.
+" Otherwise /usr/local/bin/python3
+let g:ycm_path_to_python_interpreter='/opt/homebrew/bin/python3'
 
 " .............................................................................
 " dense-analysis/ale
