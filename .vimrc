@@ -56,6 +56,9 @@ Plug 'airblade/vim-gitgutter'
 " OmniSharp to provide IDE like abilities for C#
 Plug 'OmniSharp/omnisharp-vim'
 
+" Autocompletion
+Plug 'prabirshrestha/asyncomplete.vim'
+
 call plug#end()
 
 " -----------------------------------------------------------------------------
@@ -133,6 +136,7 @@ let g:ale_lint_on_enter = 0
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_linters = {
+\   'cs': ['OmniSharp'],
 \   'markdown': ['markdownlint'],
 \   'python': ['flake8']
 \} " 'pydocstyle', 'bandit', 'mypy'
@@ -163,3 +167,26 @@ let g:mkdp_refresh_slow=1
 
 " custom markdown style
 let g:mkdp_markdown_css='~/.vim/autoload/sindresorhus/github-markdown-css/github-markdown.css'
+
+" .............................................................................
+" prabirshrestha/asyncomplete.vim
+" .............................................................................
+
+" disable the popup
+let g:asyncomplete_auto_popup = 0
+
+" allow modifying the completeopt variable, or it will be overridden all the
+" time.
+let g:asyncomplete_auto_completeopt = 0
+
+function! s:check_back_space() abort
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+" tab to show autocomplete
+inoremap <silent><expr> <TAB>
+  \ pumvisible() ? "\<C-n>" :
+  \ <SID>check_back_space() ? "\<TAB>" :
+  \ asyncomplete#force_refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
