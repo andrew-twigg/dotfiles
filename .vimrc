@@ -200,8 +200,8 @@ inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 let g:OmniSharp_diagnostic_showid = 1
 let g:OmniSharp_diagnostic_exclude_paths = [
-\ 'obj\\',
-\ '[Tt]emp\\',
-\ '\.nuget\\',
+\ 'obj/',
+\ '[Tt]emp/',
+\ '\.nuget/',
 \ '\<AssemblyInfo\.cs\>'
 \]
