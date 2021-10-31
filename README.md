@@ -39,3 +39,24 @@ cp ~/.vimrc ~/.vimrc.bak
 cp ~/dotfiles/.vimrc ~/.vimrc
 cp ~/dotfiles/.markdownlintrc ~/.markdownlintrc
 ```
+
+#### Code Completion
+
+YouCompleteMe provides the code completion.
+
+The C# completer is added as parameter to the install. Via [OmniSharp](https://github.com/OmniSharp/omnisharp-vim) and [Roslyn server](https://github.com/OmniSharp/omnisharp-roslyn). The Vim OmniSharp plugin comes from the [.vimrc](https://github.com/andrew-twigg/dotfiles/blob/master/.vimrc). The server will install automatically when you open a C# file or you can upgrade it with :OmniSharpInstall.
+
+> Note: ***Apple Silicon*** - On Apple Silicon, YCM doesn't like the miniforge Python version. Had to force it to use the version of Python installed at /opt/homebrew/bin/python3.
+
+```sh
+mkdir ~/.omnisharp
+cp ~/dotfiles/.omnisharp/omnisharp.json ~/.omnisharp/omnisharp.json
+```
+
+> Note: Not sure how OmniSharp Roslyn extensions locations paths in omnisharp.json were populated. I think they came from the VS Code extension install. So the **LocationPaths** are empty, but if they don't populate then this is where they were:
+> ```sh
+> "/Users/andrew/.vscode/extensions/josefpihrt-vscode.roslynator-3.2.2/roslyn/common",
+> "/Users/andrew/.vscode/extensions/josefpihrt-vscode.roslynator-3.2.2/roslyn/analyzers",
+> "/Users/andrew/.vscode/extensions/josefpihrt-vscode.roslynator-3.2.2/roslyn/refactorings",
+> "/Users/andrew/.vscode/extensions/josefpihrt-vscode.roslynator-3.2.2/roslyn/fixes"
+> ```
