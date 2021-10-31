@@ -59,6 +59,9 @@ Plug 'OmniSharp/omnisharp-vim'
 " Autocompletion
 Plug 'prabirshrestha/asyncomplete.vim'
 
+" Command-line fuzzy finder
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
 call plug#end()
 
 " -----------------------------------------------------------------------------
@@ -190,3 +193,9 @@ inoremap <silent><expr> <TAB>
   \ <SID>check_back_space() ? "\<TAB>" :
   \ asyncomplete#force_refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+" .............................................................................
+" OmniSharp/omnisharp-vim
+" .............................................................................
+
+let g:OmniSharp_diagnostic_showid = 1
