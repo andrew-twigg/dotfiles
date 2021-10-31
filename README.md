@@ -53,7 +53,8 @@ mkdir ~/.omnisharp
 cp ~/dotfiles/.omnisharp/omnisharp.json ~/.omnisharp/omnisharp.json
 ```
 
-> Note: Not sure how OmniSharp Roslyn extensions locations paths in omnisharp.json were populated. I think they came from the VS Code extension install. So the **LocationPaths** are empty, but if they don't populate then this is where they were:
+> Note: Not sure how OmniSharp Roslyn extensions locations paths in omnisharp.json were populated, sounds like they are [automatically discovered](https://www.strathweb.com/2019/04/roslyn-analyzers-in-code-fixes-in-omnisharp-and-vs-code/). I think they came from the VS Code extension install. So the **LocationPaths** are empty, but if they don't populate then this is where they were:
+>
 > ```sh
 > "/Users/andrew/.vscode/extensions/josefpihrt-vscode.roslynator-3.2.2/roslyn/common",
 > "/Users/andrew/.vscode/extensions/josefpihrt-vscode.roslynator-3.2.2/roslyn/analyzers",
