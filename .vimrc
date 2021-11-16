@@ -62,6 +62,9 @@ Plug 'prabirshrestha/asyncomplete.vim'
 " Command-line fuzzy finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
+" Debugging
+Plug 'puremourning/vimspector', { 'do': '/opt/homebrew/bin/python3 ./install_gadget.py --enable-python' }
+
 call plug#end()
 
 " -----------------------------------------------------------------------------
@@ -205,3 +208,20 @@ let g:OmniSharp_diagnostic_exclude_paths = [
 \ '\.nuget/',
 \ '\<AssemblyInfo\.cs\>'
 \]
+
+" .............................................................................
+" puremourning/vimspector
+" .............................................................................
+
+let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
+
+" mnemonic 'di' = 'debug inspect' (pick your own, if you prefer!)
+
+" for normal mode - the word under the cursor
+nmap <Leader>di <Plug>VimspectorBalloonEval
+" for visual mode, the visually selected text
+xmap <Leader>di <Plug>VimspectorBalloonEval
+
+" mappings for up and down the stack
+"nmap <LocalLeader><F11> <Plug>VimspectorUpFrame
+"nmap <LocalLeader><F12> <Plug>VimspectorDownFrame
