@@ -18,6 +18,14 @@ brew install yarn node
 
 Guide [here](https://qmacro.org/2021/05/13/notes-on-markdown-linting-1/) for getting this working in Vim.
 
+On Ubuntu:
+
+```sh
+npm install -g markdownlint-cli
+```
+
+On MacOS:
+
 ```sh
 brew install markdownlint-cli
 ```
