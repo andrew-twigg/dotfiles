@@ -65,8 +65,11 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " Debugging
 Plug 'puremourning/vimspector', { 'do': '/opt/homebrew/bin/python3 ./install_gadget.py --enable-python' }
 
-" JsRuntime (PyV8 for javascript interpreter)
+" jsruntime (PyV8 for javascript interpreter)
 Plug 'michalliu/jsruntime.vim', { 'do': 'cp -R autoload/* ~/.vim/autoload/' }
+
+" jsoncodecs
+Plug 'michalliu/jsoncodecs.vim', { 'do': 'cp autoload/jsoncodecs.vim ~/.vim/autoload/' }
 
 call plug#end()
 
