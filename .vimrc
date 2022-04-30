@@ -37,7 +37,7 @@ call plug#begin('~/.vim/plugged')
 
 " Code-completion engine
 " Note this is Apple Silicon specific.
-Plug 'ycm-core/YouCompleteMe', { 'do': '/opt/homebrew/bin/python3 ./install.py --cs-completer' }
+Plug 'ycm-core/YouCompleteMe', { 'do': '/opt/homebrew/bin/python3 ./install.py --cs-completer --ts-completer' }
 
 " Ale (Asynchronous Lint Engine)
 Plug 'dense-analysis/ale'
