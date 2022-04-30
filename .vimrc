@@ -72,7 +72,10 @@ Plug 'michalliu/jsruntime.vim', { 'do': 'cp -R autoload/* ~/.vim/autoload/' }
 Plug 'michalliu/jsoncodecs.vim', { 'do': 'cp autoload/jsoncodecs.vim ~/.vim/autoload/' }
 
 " jsflakes (javascript linter)
-Plug 'michalliu/jsflakes.vim', { 'do': 'mkdir ~/.vim/ftplugin; cp -R ftplugin/* ~/.vim/ftplugin/' }
+Plug 'michalliu/jsflakes.vim', { 'do': 'mkdir -p ~/.vim/ftplugin; cp -R ftplugin/* ~/.vim/ftplugin/' }
+
+" sourcebeautify.vim
+Plug 'michalliu/sourcebeautify.vim', { 'do': 'mkdir -p ~/.vim/vimfiles/plugin; cp -R plugin/* ~/.vim/vimfiles/plugin/' }
 
 call plug#end()
 
