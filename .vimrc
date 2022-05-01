@@ -66,17 +66,18 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'puremourning/vimspector',
     \ { 'do': '/opt/homebrew/bin/python3 ./install_gadget.py --enable-python --force-enable-node' }
 
-" jsruntime (PyV8 for javascript interpreter)
-Plug 'michalliu/jsruntime.vim', { 'do': 'cp -R autoload/* ~/.vim/autoload/' }
-
-" jsoncodecs
-Plug 'michalliu/jsoncodecs.vim', { 'do': 'cp autoload/jsoncodecs.vim ~/.vim/autoload/' }
-
-" jsflakes (javascript linter)
-Plug 'michalliu/jsflakes.vim', { 'do': 'mkdir -p ~/.vim/ftplugin; cp -R ftplugin/* ~/.vim/ftplugin/' }
-
-" sourcebeautify.vim
-Plug 'michalliu/sourcebeautify.vim', { 'do': 'mkdir -p ~/.vim/vimfiles/plugin; cp -R plugin/* ~/.vim/vimfiles/plugin/' }
+"" jsruntime (PyV8 for javascript interpreter)
+"Plug 'michalliu/jsruntime.vim', { 'do': 'cp -R autoload/* ~/.vim/autoload/' }
+"
+"" jsoncodecs
+"Plug 'michalliu/jsoncodecs.vim', { 'do': 'cp autoload/jsoncodecs.vim ~/.vim/autoload/' }
+"
+"" jsflakes (javascript linter)
+"Plug 'michalliu/jsflakes.vim', { 'do': 'mkdir -p ~/.vim/ftplugin; cp -R ftplugin/* ~/.vim/ftplugin/' }
+"
+"" sourcebeautify.vim
+"Plug 'michalliu/sourcebeautify.vim',
+"    \ { 'do': 'mkdir -p ~/.vim/vimfiles/plugin; cp -R plugin/* ~/.vim/vimfiles/plugin/' }
 
 call plug#end()
 
@@ -149,7 +150,8 @@ let g:ycm_path_to_python_interpreter='/opt/homebrew/bin/python3'
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'python': ['black', 'isort']
+\   'python': ['black', 'isort'],
+\   'javascript': ['prettier', 'eslint']
 \} " 'yapf', 'autopep8'
 let g:ale_lint_on_enter = 0
 let g:ale_lint_on_save = 1
@@ -157,7 +159,8 @@ let g:ale_lint_on_text_changed = 'never'
 let g:ale_linters = {
 \   'cs': ['OmniSharp'],
 \   'markdown': ['markdownlint'],
-\   'python': ['flake8']
+\   'python': ['flake8'],
+\   'javascript': ['eslint']
 \} " 'pydocstyle', 'bandit', 'mypy'
 let g:ale_linters_explicit = 1 " Only run linters named in ale_linters settings
 let g:ale_sign_error = '✘'

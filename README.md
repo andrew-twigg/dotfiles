@@ -74,16 +74,8 @@ cp ~/dotfiles/.omnisharp/omnisharp.json ~/.omnisharp/omnisharp.json
 
 The .vimrc includes:
 
-* michalliu/jsflakes.vim for linting
-* michalliu/sourcebeautify.vim for code formatting
 * ycm-core/YouCompleteMe with --ts-completer for code completion
 * puremourning/vimspector with --force-enable-node for debugging
-
-For linting...
-
-```sh
-cp jsflakes/jsconfig.json <project root>
-```
 
 For debugging...
 
