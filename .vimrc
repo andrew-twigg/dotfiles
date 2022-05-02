@@ -135,7 +135,7 @@ let g:ycm_path_to_python_interpreter='/opt/homebrew/bin/python3'
 " dense-analysis/ale
 " .............................................................................
 
-let js_fixers = ['eslint']
+let js_fixers = ['prettier', 'eslint']
 let js_linters = ['eslint']
 
 let g:ale_fix_on_save = 1
