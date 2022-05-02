@@ -74,8 +74,15 @@ cp ~/dotfiles/.omnisharp/omnisharp.json ~/.omnisharp/omnisharp.json
 
 The .vimrc includes:
 
+* dense-analysis/ale for fixers and linters
 * ycm-core/YouCompleteMe with --ts-completer for code completion
 * puremourning/vimspector with --force-enable-node for debugging
+
+For fixers and linters, in the root of the project...
+
+```sh
+npm install prettier
+```
 
 For debugging...
 
