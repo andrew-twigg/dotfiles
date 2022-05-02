@@ -37,7 +37,8 @@ call plug#begin('~/.vim/plugged')
 
 " Code-completion engine
 " Note this is Apple Silicon specific.
-Plug 'ycm-core/YouCompleteMe', { 'do': '/opt/homebrew/bin/python3 ./install.py --cs-completer --ts-completer' }
+Plug 'ycm-core/YouCompleteMe',
+    \ { 'do': '/opt/homebrew/bin/python3 ./install.py --cs-completer --ts-completer' }
 
 " Ale (Asynchronous Lint Engine)
 Plug 'dense-analysis/ale'
@@ -65,19 +66,6 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " Debugging
 Plug 'puremourning/vimspector',
     \ { 'do': '/opt/homebrew/bin/python3 ./install_gadget.py --enable-python --force-enable-node' }
-
-"" jsruntime (PyV8 for javascript interpreter)
-"Plug 'michalliu/jsruntime.vim', { 'do': 'cp -R autoload/* ~/.vim/autoload/' }
-"
-"" jsoncodecs
-"Plug 'michalliu/jsoncodecs.vim', { 'do': 'cp autoload/jsoncodecs.vim ~/.vim/autoload/' }
-"
-"" jsflakes (javascript linter)
-"Plug 'michalliu/jsflakes.vim', { 'do': 'mkdir -p ~/.vim/ftplugin; cp -R ftplugin/* ~/.vim/ftplugin/' }
-"
-"" sourcebeautify.vim
-"Plug 'michalliu/sourcebeautify.vim',
-"    \ { 'do': 'mkdir -p ~/.vim/vimfiles/plugin; cp -R plugin/* ~/.vim/vimfiles/plugin/' }
 
 call plug#end()
 
@@ -151,7 +139,7 @@ let g:ale_fix_on_save = 1
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'python': ['black', 'isort'],
-\   'javascript': ['prettier', 'eslint']
+\   'javascript': ['eslint']
 \} " 'yapf', 'autopep8'
 let g:ale_lint_on_enter = 0
 let g:ale_lint_on_save = 1

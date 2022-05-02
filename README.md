@@ -81,7 +81,8 @@ The .vimrc includes:
 For fixers and linters, in the root of the project...
 
 ```sh
-npm install prettier
+npm install eslint --save-dev
+npx eslint --init
 ```
 
 For debugging...
