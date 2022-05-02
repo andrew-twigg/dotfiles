@@ -135,11 +135,16 @@ let g:ycm_path_to_python_interpreter='/opt/homebrew/bin/python3'
 " dense-analysis/ale
 " .............................................................................
 
+let js_fixers = ['eslint']
+let js_linters = ['eslint']
+
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'python': ['black', 'isort'],
-\   'javascript': ['eslint']
+\   'javascript': js_fixers,
+\   'typescript': js_fixers,
+\   'json': ['fixjson']
 \} " 'yapf', 'autopep8'
 let g:ale_lint_on_enter = 0
 let g:ale_lint_on_save = 1
@@ -148,7 +153,8 @@ let g:ale_linters = {
 \   'cs': ['OmniSharp'],
 \   'markdown': ['markdownlint'],
 \   'python': ['flake8'],
-\   'javascript': ['eslint']
+\   'javascript': js_linters,
+\   'typescript': js_linters,
 \} " 'pydocstyle', 'bandit', 'mypy'
 let g:ale_linters_explicit = 1 " Only run linters named in ale_linters settings
 let g:ale_sign_error = '✘'
