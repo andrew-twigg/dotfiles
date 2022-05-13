@@ -141,6 +141,7 @@ let js_linters = ['eslint']
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'cs': ['dotnet-format'],
 \   'python': ['black', 'isort'],
 \   'javascript': js_fixers,
 \   'typescript': js_fixers,
