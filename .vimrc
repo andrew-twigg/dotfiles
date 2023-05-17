@@ -97,7 +97,7 @@ set backspace=indent,eol,start  " allow backspace
 set expandtab                   " on pressing tab, insert 4 spaces
 set nu                          " line numbers on
 set shiftwidth=4                " when indenting with '>', use 4 spaces width
-set spell                       " spell checking
+"set spell                       " spell checking
 set spelllang=en_gb             " english (GB)
 set tabstop=4                   " show existing tab with 4 spaces width
 
