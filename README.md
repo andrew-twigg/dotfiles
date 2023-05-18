@@ -46,11 +46,12 @@ cp ~/.vimrc ~/.vimrc.bak
 # Copy in dotfiles
 cp ~/dotfiles/.vimrc ~/.vimrc
 cp ~/dotfiles/.markdownlintrc ~/.markdownlintrc
+cp ~/dotfiles/coc-settings.json ~/.vim/coc-settings.json
 ```
 
 #### Code Completion
 
-YouCompleteMe provides the code completion.
+YouCompleteMe provides the code completion for all things except YAML. CoC for YAML because known issues with YCM. Have tried CoC for all other things but seems too new and not as good as YCM.
 
 The C# completer is added as parameter to the install. Via [OmniSharp](https://github.com/OmniSharp/omnisharp-vim) and [Roslyn server](https://github.com/OmniSharp/omnisharp-roslyn). The Vim OmniSharp plugin comes from the [.vimrc](https://github.com/andrew-twigg/dotfiles/blob/master/.vimrc). The server will install automatically when you open a C# file or you can upgrade it with :OmniSharpInstall.
 
@@ -69,6 +70,12 @@ cp ~/dotfiles/.omnisharp/omnisharp.json ~/.omnisharp/omnisharp.json
 > "/Users/andrew/.vscode/extensions/josefpihrt-vscode.roslynator-3.2.2/roslyn/refactorings",
 > "/Users/andrew/.vscode/extensions/josefpihrt-vscode.roslynator-3.2.2/roslyn/fixes"
 > ```
+
+CoC for YAML code completion.
+
+```sh
+:CocInstall coc-yaml
+```
 
 ### Javascript Coding
 

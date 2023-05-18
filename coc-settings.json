@@ -1,0 +1,7 @@
+{
+    // YAML
+    "yaml.enable": true,
+    "yaml.schemas": {
+        "kubernetes": "/*.yaml"
+    }
+}
