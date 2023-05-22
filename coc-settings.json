@@ -2,6 +2,6 @@
     // YAML
     "yaml.enable": true,
     "yaml.schemas": {
-        "kubernetes": "/*.yaml"
+        "kubernetes": ["/*.yml", "/*.yaml"]
     }
 }
